@@ -8,12 +8,11 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 def get_oauth_token_from_refresh_token(token_endpoint, client_id, client_secret, refresh_token):
-    """
-    Obtém um novo access_token usando um refresh_token existente.
-    Endpoints comuns:
-    - Google: https://oauth2.googleapis.com/token
-    - Microsoft: https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token
-    """
+    #Obtém um novo access_token usando um refresh_token existente.
+    #Endpoints comuns:
+    #- Google: https://oauth2.googleapis.com/token
+    #- Microsoft: https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token
+
     data = {
         'client_id': client_id,
         'client_secret': client_secret,

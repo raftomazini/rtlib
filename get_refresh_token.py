@@ -4,7 +4,7 @@ import urllib.parse
 import urllib.request
 import webbrowser
 import json
-import sys
+#import sys
 
 # Configurações do servidor local para receber o callback
 PORT = 8080
