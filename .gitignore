@@ -1,2 +1,2 @@
 test_smtp.py
-mail/__pycache__/
+mail\__pycache__\
