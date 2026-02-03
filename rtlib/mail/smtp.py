@@ -104,9 +104,7 @@ def send_ssl_email(smtp_host, smtp_port, smtp_user, smtp_pass, smtp_from, smtp_r
             if oauth_token:
                 auth_string = f"user={smtp_user}\1auth=Bearer {oauth_token}\1\1"
                 auth_b64 = base64.b64encode(auth_string.encode("utf-8")).decode("ascii")
-                print(auth_string, auth_b64)
                 code, resp = server.docmd("AUTH", "XOAUTH2 " + auth_b64)
-                print(code, resp)
                 if code != 235:
                     raise smtplib.SMTPAuthenticationError(code, resp)
             else:
